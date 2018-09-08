@@ -34,7 +34,7 @@ handleSubmit(e){
       <label className = "title">Diary Entry
       </label>
       <br/>
-      <textarea  type="text" value={this.state.value}   onChange={this.handleChange} />
+      <input  type="text" value={this.state.value}   onChange={this.handleChange} />
       <br/>
       <Button color="primary"  value = {this.state.value} onClick = {this.handleSubmit}>submit</Button>      
       </Col>
