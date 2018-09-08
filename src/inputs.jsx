@@ -10,7 +10,7 @@ const List = props => (
   <div className = "input">
   
     {
-      props.ans.map((item, index) => <p key={index}>{item}</p>)
+      props.ans.map((item, index) =>  <h4 key={index}>{item}</h4>)
     }
     
   </div>

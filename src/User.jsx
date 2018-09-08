@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { label, textarea, Button, Container, Row,  Col } from 'reactstrap';
+import { input, Button, Container, Row,  Col } from 'reactstrap';
 import List from './inputs';
 
 //add if statement == if text != no value create a warning sign
@@ -30,13 +30,14 @@ handleSubmit(e){
       <Container>
       <Row>
       <Col xs="2" sm="3"></Col>
-      <Col  md = "6" md="6">
-      <label className = "title">Diary Entry
-      </label>
+      <Col md="6">
+      <h1 className = "title">Things to do
+      </h1>
       <br/>
       <input  type="text" value={this.state.value}   onChange={this.handleChange} />
       <br/>
-      <Button color="primary"  value = {this.state.value} onClick = {this.handleSubmit}>submit</Button>      
+      <Button className = "button" color="primary"  value = {this.state.value} onClick = {this.handleSubmit}>submit</Button> 
+      <Button className = "button" color="primary" >Remove</Button>      
       </Col>
       <Col xs="2" sm="3"></Col>
       </Row>
