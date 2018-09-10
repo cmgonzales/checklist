@@ -4,6 +4,8 @@ import List from './inputs';
 
 //add if statement == if text != no value create a warning sign
 
+
+
 class User extends Component {
     constructor(props){
     super(props)
@@ -18,12 +20,21 @@ handleChange (e){
         this.setState({value: e.target.value})
 }
 handleSubmit(e){
+
+  if(e.target.value == null){
+    alert("Please enter input")
+  }else {
+
    e.preventDefault();
    this.setState({
       value: '',
       ans: [...this.state.ans, this.state.value]
     });
 }
+}
+
+
+
   render() {
     return (
       <div>
@@ -43,8 +54,9 @@ handleSubmit(e){
       </Row>
       </Container>
       
+      <ul>
       <List className = "list" ans={this.state.ans} /> 
-      
+      </ul>
     
       </div>
     );

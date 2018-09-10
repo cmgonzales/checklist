@@ -10,9 +10,10 @@ const List = props => (
   <div className = "input">
   
     {
-      props.ans.map((item, index) =>  <h4 key={index}>{item}</h4>)
+      props.ans.map((item, index) =>  <li key={index}>{item}</li>)
     }
-    
+   
+ 
   </div>
   </Col>
   </Row>
